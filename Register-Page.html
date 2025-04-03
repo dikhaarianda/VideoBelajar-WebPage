@@ -4,19 +4,89 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
+  <!-- turn off visibility password in the MS Edge -->
+  <style>
+    input::-ms-reveal,
+    input::-ms-clear {
+      display: none;
+    }
+  </style>
   <!-- Tailwind CSS v3 CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Get Lato Font using Embed Code-->
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-<body class="bg-[#fffdf3]" style="font-family: 'Lato', sans-serif;">
-  <nav class="bg-white shadow-lg sm:shadow-sm p-3">
-    <div class="container mx-auto flex items-center">
-      <!-- Page Logo -->
+<body class="bg-[#fffdf3] font-['DM_Sans',sans-serif] h-screen flex flex-col">
+  <!-- Navbar -->
+  <nav class="bg-white shadow-lg sm:border-b sm:shadow-none p-3">
+    <div class="container mx-auto flex items-center justify-between">
       <a href="./Login-Page.html">
-        <img src="./assets/logo.png" alt="Logo Image" class="h-10">
+        <img src="./assets/logo.png" alt="Logo Image" class="h-12">
       </a>
     </div>
   </nav>
+
+  <!-- Main Content -->
+  <div class="flex-grow flex items-center justify-center px-4">
+    <div class="bg-white p-6 sm:p-8 rounded-sm w-full max-w-md border border-[#F1F1F1]">
+      <div class="text-center mb-6">
+        <h3 class="font-bold text-2xl text-[#222325] mb-1 ['Poppins']">Pendaftaran Akun</h3>
+        <p class="text-gray-500 text-sm">Yuk, daftarkan akunmu sekarang juga!</p>
+      </div>
+      <form action="#" method="POST" class="mb-4">
+        <div class="mb-3">
+          <label class="block text-gray-700 text-sm mb-1">Nama Lengkap <span class="text-red-600">*</span></label>
+          <input type="email" class="w-full pr-10 p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
+        </div>
+        <div class="mb-3">
+          <label class="block text-gray-700 text-sm mb-1">E-Mail <span class="text-red-600">*</span></label>
+          <input type="email" class="w-full pr-10 p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
+        </div>
+        <div class="mb-3">
+          <label class="block text-gray-700 text-sm mb-1">No. Telp <span class="text-red-600">*</span></label>
+          <div class="flex items-center justify-between w-full gap-5">
+            <div class="flex items-center w-2/5">
+              <div class="bg-gray-200 rounded-l-md px-1 h-10 w-1/4 flex justify-center items-center">
+                <img src="https://flagcdn.com/w40/id.png" alt="ID Flag">
+              </div>
+              <select class="bg-white border border-gray-300 p-2 w-3/4 rounded-r-md focus:outline-none">
+                <option value="+62">+62</option>
+                <option value="+1">+1</option>
+                <option value="+91">+91</option>
+              </select>
+            </div>
+            <input type="tel" class="border border-gray-300 rounded p-2 w-3/5 focus:outline-none focus:ring-2 focus:ring-blue-400">
+          </div>
+        </div>
+        <div class="mb-3 relative">
+          <label class="block text-gray-700 text-sm mb-1">Kata Sandi <span class="text-red-600">*</span></label>
+          <input type="password" class="w-full pr-10 p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
+          <button class="absolute top-9 right-3 transform">
+            <img id="eye-icon" src="./assets/login/eye-off.png" alt="Show Password" class="h-5 w-5">
+          </button>
+        </div>
+        <div class="mb-2 relative">
+          <label class="block text-gray-700 text-sm mb-1">Konfirmasi Kata Sandi <span class="text-red-600">*</span></label>
+          <input type="password" class="w-full pr-10 p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
+          <button class="absolute top-9 right-3 transform">
+            <img id="eye-icon" src="./assets/login/eye-off.png" alt="Show Password" class="h-5 w-5">
+          </button>
+        </div>
+        <div class="text-right">
+          <a href="#" class="text-sm text-gray-700">Lupa Password?</a>
+        </div>
+      </form>
+      <button class="w-full p-1 rounded-md bg-green-500 text-white mb-3 text-sm font-semibold">Daftar</button>
+      <button class="w-full p-1 rounded-md bg-green-100 text-green-500 text-sm font-semibold">Masuk</button>
+      <div class="flex items-center my-4">
+        <hr class="flex-grow border-t border-gray-300">
+        <span class="px-2 text-gray-500">atau</span>
+        <hr class="flex-grow border-t border-gray-300">
+      </div>
+      <button class="w-full flex items-center justify-center p-1 gap-2 rounded-md border border-gray-300 text-gray-700 text-sm font-semibold">
+        <img src="assets/login/icon-google.png" alt="Google Icon" class="h-4">
+        Masuk dengan Google
+      </button>
+    </div>
+  </div>
 </body>
 </html>
