@@ -3,20 +3,408 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <!-- Tailwind CSS v3 CDN -->
+  <title>Beranda</title>
+  <style>
+    input::-ms-reveal,
+    input::-ms-clear {
+      display: none;
+    }
+  </style>
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Get Lato Font using Embed Code-->
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body class="bg-[#fffdf3]" style="font-family: 'Lato', sans-serif;">
-  <nav class="bg-white shadow-lg sm:shadow-sm p-3">
-    <div class="container mx-auto flex items-center">
-      <!-- Page Logo -->
+<body class="bg-[#fffdf3] font-['DM_Sans',sans-serif] h-screen flex flex-col">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-lg sm:border-b sm:shadow-none p-3">
+    <div class="container mx-auto flex items-center justify-between">
       <a href="./Index.html">
-        <img src="./assets/logo.png" alt="Logo Image" class="h-10">
+        <img src="./assets/logo.png" alt="Logo Image" class="h-12">
       </a>
+      <div class="hidden sm:flex items-center gap-12 text-gray-500">
+        <a href="#">Kategori</a>
+        <button><img src="./assets/index/Avatar.png" alt="User Profile"></button>
+      </div>
+      <span class="sm:hidden text-gray-600 pr-6">
+        <button><img src="./assets/index/hamburger_icon.png" alt="Mobile Menu"></button>
+      </span>
     </div>
   </nav>
+
+  <!-- Main Content -->
+  <div class="container mx-auto p-3 h-fit sm:h-96 my-10">
+    <div class="bg-cover bg-center h-full rounded-lg" style="background-image: url('./assets/index/banner/banner_frame1.jpeg');">
+      <div class="bg-cover bg-center h-full rounded-lg inset-0 bg-black bg-opacity-80 flex flex-col justify-center items-center text-center px-5 py-[100px]">
+        <h1 class="text-white text-2xl sm:text-4xl font-bold max-w-full sm:max-w-6xl">
+          Revolusi Pembelajaran: Temukan Ilmu Baru melalui Platform Video Interaktif!
+        </h1>
+        <p class="text-white mt-4 text-lg sm:text-xl max-w-full sm:max-w-5xl mb-5">
+          Temukan ilmu baru yang menarik dan mendalam melalui koleksi video pembelajaran berkualitas tinggi. Tidak hanya itu, Anda juga dapat berpartisipasi dalam latihan interaktif yang akan meningkatkan pemahaman Anda.
+        </p>
+        <a href="#" class="mt-6 bg-green-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-green-600 transition">
+          Temukan Video Course untuk Dipelajari!
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mx-auto p-3 mb-5">
+    <h3 class="font-bold text-2xl text-[#222325] mb-1 ['Poppins']">Koleksi Video Pembelajaran Unggulan</h3>
+    <p class="text-gray-500 text-sm mb-5">Jelajahi Dunia Pengetahuan Melalui Pilihan Kami!</p>
+
+    <nav class="flex space-x-6 text-gray-600 text-lg font-medium whitespace-nowrap overflow-x-auto">
+      <a href="#" class="text-red-500 border-b-2 border-red-500 pb-1">Semua Kelas</a>
+      <a href="#">Pemasaran</a>
+      <a href="#">Desain</a>
+      <a href="#">Pengembangan Diri</a>
+      <a href="#">Bisnis</a>
+    </nav>
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-6">
+      <div class="bg-white p-4 rounded-lg shadow">
+        <div class="flex sm:block gap-5">
+          <img src="./assets/index/course section/course type/image-1.jpeg" alt="Course Image" class="w-1/6 h-24 sm:w-full sm:h-64 rounded-lg object-cover">
+          <div class="w-5/6 sm:w-full">
+            <h3 class="mt-0 sm:mt-4 font-semibold text-lg">Big 4 Auditor Financial Analyst</h3>
+            <p class="hidden sm:flex text-gray-600 text-sm">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan...</p>
+            <div class="flex items-center mt-2">
+              <img src="./assets/index/course section/course teacher/image-1.png" class="size-7 sm:size-8 rounded-md">
+              <div class="ml-2">
+                <p class="text-sm font-semibold">Jenna Ortega</p>
+                <p class="text-xs text-gray-500">Senior Accountant di Gojek</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-5 sm:justify-between sm:gap-0 items-center mt-3">
+          <div class="flex gap-2">
+            <ul>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star-half-alt text-yellow-400"></i>
+              <i class="far fa-star text-yellow-400"></i>
+              <i class="far fa-star text-yellow-400"></i>
+            </ul>
+            <p class="text-gray-500 underline">3.5 (86)</p>
+          </div>
+          <p class="text-green-600 font-bold">Rp 300K</p>
+        </div>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow">
+        <div class="flex sm:block gap-5">
+          <img src="./assets/index/course section/course type/image-2.jpeg" alt="Course Image" class="w-1/6 h-24 sm:w-full sm:h-64 rounded-lg object-cover">
+          <div class="w-5/6 sm:w-full">
+            <h3 class="mt-0 sm:mt-4 font-semibold text-lg">Big 4 Auditor Financial Analyst</h3>
+            <p class="hidden sm:flex text-gray-600 text-sm">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan...</p>
+            <div class="flex items-center mt-2">
+              <img src="./assets/index/course section/course teacher/image-2.png" class="size-7 sm:size-8 rounded-md">
+              <div class="ml-2">
+                <p class="text-sm font-semibold">Jenna Ortega</p>
+                <p class="text-xs text-gray-500">Senior Accountant di Gojek</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-5 sm:justify-between sm:gap-0 items-center mt-3">
+          <div class="flex gap-2">
+            <ul>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star-half-alt text-yellow-400"></i>
+              <i class="far fa-star text-yellow-400"></i>
+              <i class="far fa-star text-yellow-400"></i>
+            </ul>
+            <p class="text-gray-500 underline">3.5 (86)</p>
+          </div>
+          <p class="text-green-600 font-bold">Rp 300K</p>
+        </div>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow">
+        <div class="flex sm:block gap-5">
+          <img src="./assets/index/course section/course type/image-3.jpeg" alt="Course Image" class="w-1/6 h-24 sm:w-full sm:h-64 rounded-lg object-cover">
+          <div class="w-5/6 sm:w-full">
+            <h3 class="mt-0 sm:mt-4 font-semibold text-lg">Big 4 Auditor Financial Analyst</h3>
+            <p class="hidden sm:flex text-gray-600 text-sm">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan...</p>
+            <div class="flex items-center mt-2">
+              <img src="./assets/index/course section/course teacher/image-3.png" class="size-7 sm:size-8 rounded-md">
+              <div class="ml-2">
+                <p class="text-sm font-semibold">Jenna Ortega</p>
+                <p class="text-xs text-gray-500">Senior Accountant di Gojek</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-5 sm:justify-between sm:gap-0 items-center mt-3">
+          <div class="flex gap-2">
+            <ul>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star-half-alt text-yellow-400"></i>
+              <i class="far fa-star text-yellow-400"></i>
+              <i class="far fa-star text-yellow-400"></i>
+            </ul>
+            <p class="text-gray-500 underline">3.5 (86)</p>
+          </div>
+          <p class="text-green-600 font-bold">Rp 300K</p>
+        </div>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow">
+        <div class="flex sm:block gap-5">
+          <img src="./assets/index/course section/course type/image-4.jpeg" alt="Course Image" class="w-1/6 h-24 sm:w-full sm:h-64 rounded-lg object-cover">
+          <div class="w-5/6 sm:w-full">
+            <h3 class="mt-0 sm:mt-4 font-semibold text-lg">Big 4 Auditor Financial Analyst</h3>
+            <p class="hidden sm:flex text-gray-600 text-sm">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan...</p>
+            <div class="flex items-center mt-2">
+              <img src="./assets/index/course section/course teacher/image-4.png" class="size-7 sm:size-8 rounded-md">
+              <div class="ml-2">
+                <p class="text-sm font-semibold">Jenna Ortega</p>
+                <p class="text-xs text-gray-500">Senior Accountant di Gojek</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-5 sm:justify-between sm:gap-0 items-center mt-3">
+          <div class="flex gap-2">
+            <ul>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star-half-alt text-yellow-400"></i>
+              <i class="far fa-star text-yellow-400"></i>
+              <i class="far fa-star text-yellow-400"></i>
+            </ul>
+            <p class="text-gray-500 underline">3.5 (86)</p>
+          </div>
+          <p class="text-green-600 font-bold">Rp 300K</p>
+        </div>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow">
+        <div class="flex sm:block gap-5">
+          <img src="./assets/index/course section/course type/image-5.jpeg" alt="Course Image" class="w-1/6 h-24 sm:w-full sm:h-64 rounded-lg object-cover">
+          <div class="w-5/6 sm:w-full">
+            <h3 class="mt-0 sm:mt-4 font-semibold text-lg">Big 4 Auditor Financial Analyst</h3>
+            <p class="hidden sm:flex text-gray-600 text-sm">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan...</p>
+            <div class="flex items-center mt-2">
+              <img src="./assets/index/course section/course teacher/image-5.png" class="size-7 sm:size-8 rounded-md">
+              <div class="ml-2">
+                <p class="text-sm font-semibold">Jenna Ortega</p>
+                <p class="text-xs text-gray-500">Senior Accountant di Gojek</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-5 sm:justify-between sm:gap-0 items-center mt-3">
+          <div class="flex gap-2">
+            <ul>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star-half-alt text-yellow-400"></i>
+              <i class="far fa-star text-yellow-400"></i>
+              <i class="far fa-star text-yellow-400"></i>
+            </ul>
+            <p class="text-gray-500 underline">3.5 (86)</p>
+          </div>
+          <p class="text-green-600 font-bold">Rp 300K</p>
+        </div>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow">
+        <div class="flex sm:block gap-5">
+          <img src="./assets/index/course section/course type/image-6.jpeg" alt="Course Image" class="w-1/6 h-24 sm:w-full sm:h-64 rounded-lg object-cover">
+          <div class="w-5/6 sm:w-full">
+            <h3 class="mt-0 sm:mt-4 font-semibold text-lg">Big 4 Auditor Financial Analyst</h3>
+            <p class="hidden sm:flex text-gray-600 text-sm">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan...</p>
+            <div class="flex items-center mt-2">
+              <img src="./assets/index/course section/course teacher/image-6.png" class="size-7 sm:size-8 rounded-md">
+              <div class="ml-2">
+                <p class="text-sm font-semibold">Jenna Ortega</p>
+                <p class="text-xs text-gray-500">Senior Accountant di Gojek</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-5 sm:justify-between sm:gap-0 items-center mt-3">
+          <div class="flex gap-2">
+            <ul>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star-half-alt text-yellow-400"></i>
+              <i class="far fa-star text-yellow-400"></i>
+              <i class="far fa-star text-yellow-400"></i>
+            </ul>
+            <p class="text-gray-500 underline">3.5 (86)</p>
+          </div>
+          <p class="text-green-600 font-bold">Rp 300K</p>
+        </div>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow">
+        <div class="flex sm:block gap-5">
+          <img src="./assets/index/course section/course type/image-7.jpeg" alt="Course Image" class="w-1/6 h-24 sm:w-full sm:h-64 rounded-lg object-cover">
+          <div class="w-5/6 sm:w-full">
+            <h3 class="mt-0 sm:mt-4 font-semibold text-lg">Big 4 Auditor Financial Analyst</h3>
+            <p class="hidden sm:flex text-gray-600 text-sm">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan...</p>
+            <div class="flex items-center mt-2">
+              <img src="./assets/index/course section/course teacher/image-7.png" class="size-7 sm:size-8 rounded-md">
+              <div class="ml-2">
+                <p class="text-sm font-semibold">Jenna Ortega</p>
+                <p class="text-xs text-gray-500">Senior Accountant di Gojek</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-5 sm:justify-between sm:gap-0 items-center mt-3">
+          <div class="flex gap-2">
+            <ul>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star-half-alt text-yellow-400"></i>
+              <i class="far fa-star text-yellow-400"></i>
+              <i class="far fa-star text-yellow-400"></i>
+            </ul>
+            <p class="text-gray-500 underline">3.5 (86)</p>
+          </div>
+          <p class="text-green-600 font-bold">Rp 300K</p>
+        </div>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow">
+        <div class="flex sm:block gap-5">
+          <img src="./assets/index/course section/course type/image-8.jpeg" alt="Course Image" class="w-1/6 h-24 sm:w-full sm:h-64 rounded-lg object-cover">
+          <div class="w-5/6 sm:w-full">
+            <h3 class="mt-0 sm:mt-4 font-semibold text-lg">Big 4 Auditor Financial Analyst</h3>
+            <p class="hidden sm:flex text-gray-600 text-sm">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan...</p>
+            <div class="flex items-center mt-2">
+              <img src="./assets/index/course section/course teacher/image-8.png" class="size-7 sm:size-8 rounded-md">
+              <div class="ml-2">
+                <p class="text-sm font-semibold">Jenna Ortega</p>
+                <p class="text-xs text-gray-500">Senior Accountant di Gojek</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-5 sm:justify-between sm:gap-0 items-center mt-3">
+          <div class="flex gap-2">
+            <ul>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star-half-alt text-yellow-400"></i>
+              <i class="far fa-star text-yellow-400"></i>
+              <i class="far fa-star text-yellow-400"></i>
+            </ul>
+            <p class="text-gray-500 underline">3.5 (86)</p>
+          </div>
+          <p class="text-green-600 font-bold">Rp 300K</p>
+        </div>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow">
+        <div class="flex sm:block gap-5">
+          <img src="./assets/index/course section/course type/image-9.jpeg" alt="Course Image" class="w-1/6 h-24 sm:w-full sm:h-64 rounded-lg object-cover">
+          <div class="w-5/6 sm:w-full">
+            <h3 class="mt-0 sm:mt-4 font-semibold text-lg">Big 4 Auditor Financial Analyst</h3>
+            <p class="hidden sm:flex text-gray-600 text-sm">Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan...</p>
+            <div class="flex items-center mt-2">
+              <img src="./assets/index/course section/course teacher/image-3.png" class="size-7 sm:size-8 rounded-md">
+              <div class="ml-2">
+                <p class="text-sm font-semibold">Jenna Ortega</p>
+                <p class="text-xs text-gray-500">Senior Accountant di Gojek</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-5 sm:justify-between sm:gap-0 items-center mt-3">
+          <div class="flex gap-2">
+            <ul>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star-half-alt text-yellow-400"></i>
+              <i class="far fa-star text-yellow-400"></i>
+              <i class="far fa-star text-yellow-400"></i>
+            </ul>
+            <p class="text-gray-500 underline">3.5 (86)</p>
+          </div>
+          <p class="text-green-600 font-bold">Rp 300K</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mx-auto p-3 h-fit sm:h-96 mb-10">
+    <div class="bg-cover bg-center h-full rounded-lg" style="background-image: url('./assets/index/banner/banner_frame2.jpeg');">
+      <div class="bg-cover bg-center h-full rounded-lg inset-0 bg-black bg-opacity-80 flex flex-col justify-center items-center text-center px-5 py-[100px]">
+        <h2 class="text-white">NEWSLETTER</h2>
+        <h1 class="text-white text-2xl sm:text-4xl font-bold max-w-full sm:max-w-2xl">
+          Mau Belajar Lebih Banyak?
+        </h1>
+        <p class="text-white mt-4 text-lg sm:text-xl max-w-full sm:max-w-4xl mb-5">
+          Daftarkan dirimu untuk mendapatkan informasi terbaru dan penawaran spesial dari program-program terbaik hariesok.id
+        </p>
+        <div class="mt-6 bg-none sm:bg-white w-full xl:w-1/2 p-2 rounded-md flex flex-col sm:flex-row justify-center items-center gap-5 pl-0 sm:pl-8">
+          <input type="text" placeholder="Masukan Emailmu" class="py-2 rounded-lg w-3/4 text-center sm:text-left w-full sm:w-none">
+          <a href="#" class="py-2 px-6 bg-[#FFBD3A] text-white font-semibold rounded-lg w-full sm:w-1/4 hover:bg-orange-600 transition">Subscribe!</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-white border-t p-5 py-12">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between gap-8 mb-6">
+        <div class="md:w-1/2">
+          <img src="./assets/logo.png" alt="Logo" class="mb-2 h-15">
+          <h3 class="font-semibold mb-2">Gali Potensi Anda Melalui Pembelajaran Video di hariesok.id!</h3>
+          <p class="mb-2 text-gray-600">Jl. Usman Effendi No. 50 Lowokwaru, Malang</p>
+          <p class="text-gray-600">+62-877-7123-1234</p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-2 sm:gap-8 md:gap-16">
+          <div>
+            <h3 class="font-bold mb-2 hidden sm:block">Kategori</h3>
+            <button class="font-bold mb-2 flex sm:hidden w-full justify-between">Kategori<span class="font-semibold text-xl text-gray-400">></span></button>
+            <ul class="space-y-1 hidden sm:block text-gray-600">
+              <li><a href="">Digital & Teknologi</a></li>
+              <li><a href="">Pemasaran</a></li>
+              <li><a href="">Manajemen Bisnis</a></li>
+              <li><a href="">Pengembangan Diri</a></li>
+              <li><a href="">Desain</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold mb-2 hidden sm:block">Perusahaan</h3>
+            <button class="font-bold mb-2 flex sm:hidden w-full justify-between">Perusahaan<span class="font-semibold text-xl text-gray-400">></span></button>
+            <ul class="space-y-1 hidden sm:block text-gray-600">
+              <li><a href="">Tentang Kami</a></li>
+              <li><a href="">FAQ</a></li>
+              <li><a href="">Kebijakan Privasi</a></li>
+              <li><a href="">Ketentuan Layanan</a></li>
+              <li><a href="">Bantuan</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold mb-2 hidden sm:block">Komunitas</h3>
+            <button class="font-bold mb-2 flex sm:hidden w-full justify-between">Komunitas<span class="font-semibold text-xl text-gray-400">></span></button>
+            <ul class="space-y-1 hidden sm:block text-gray-600">
+              <li><a href="">Tips Sukses</a></li>
+              <li><a href="">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr class="border-gray-300 my-6">
+      <div class="flex flex-col-reverse sm:flex-row justify-between items-center gap-4">
+        <h3 class="text-gray-500 text-sm">@2023 Gerobak Sayur All Rights Reserved.</h3>
+        <div class="flex gap-3">
+          <a href="#" class="border-2 border-black rounded-full size-8 p-2">
+            <img src="https://img.icons8.com/?size=100&id=102748&format=png&color=000000" alt="LinkedIn" class="size-full object-contain">
+          </a>
+          <a href="#" class="border-2 border-black rounded-full size-8 p-2">
+            <img src="https://img.icons8.com/?size=100&id=87264&format=png&color=000000" alt="Facebook" class="size-full object-contain">
+          </a>
+          <a href="#" class="border-2 border-black rounded-full size-8 p-2">
+            <img src="https://img.icons8.com/?size=100&id=32320&format=png&color=000000" alt="Instagram" class="size-full object-contain">
+          </a>
+          <a href="#" class="border-2 border-black rounded-full size-8 p-2">
+            <img src="https://img.icons8.com/?size=100&id=437&format=png&color=000000" alt="Twitter" class="size-full object-contain">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
