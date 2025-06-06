@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register</title>
+
+  <!-- Disable password visibility toggle in Microsoft Edge -->
+  <style>
+    input::-ms-reveal,
+    input::-ms-clear {
+      display: none;
+    }
+  </style>
+
+  <!-- Tailwind CSS CDN (v3) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: DM Sans & Poppins -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body class="bg-[#fffdf3] font-['DM_Sans',sans-serif] h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-white shadow-lg sm:border-b sm:shadow-none px-5 py-3 mb-8">
+    <div class="container mx-auto flex items-center justify-between">
+      <a href="./Register-Page.html">
+        <img src="./assets/logo.png" alt="Logo Image" class="h-12" />
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow flex items-center justify-center px-4">
+    <div class="bg-white p-6 sm:p-8 rounded-sm w-full max-w-lg border-[1px] border-[#F1F1F1]">
+
+      <!-- Form Heading -->
+      <div class="text-center mb-10">
+        <h3 class="font-bold text-[32px] text-[#222325] font-['Poppins']">Pendaftaran Akun</h3>
+        <p class="text-[#333333AD] text-[16px]">Yuk, daftarkan akunmu sekarang juga!</p>
+      </div>
+
+      <!-- Register Form -->
+      <form action="#" method="POST" class="mb-4">
+        <!-- Full Name -->
+        <div class="mb-5">
+          <label class="block text-[#4A505C] text-[16px] mb-1">
+            Nama Lengkap <span class="text-[#D32E1F]">*</span>
+          </label>
+          <input
+            type="text"
+            class="w-full pr-10 p-2 border border-[#F1F1F1] rounded"
+            required
+          />
+        </div>
+
+        <!-- Email -->
+        <div class="mb-5">
+          <label class="block text-[#4A505C] text-[16px] mb-1">
+            E-mail <span class="text-[#D32E1F]">*</span>
+          </label>
+          <input
+            type="email"
+            class="w-full pr-10 p-2 border border-[#F1F1F1] rounded"
+            required
+          />
+        </div>
+
+        <!-- Phone Number -->
+        <div class="mb-5">
+          <label class="block text-[#4A505C] text-[16px] mb-1">
+            No. Telp <span class="text-[#D32E1F]">*</span>
+          </label>
+          <div class="flex items-center gap-3">
+            <div class="flex w-2/5">
+              <div class="bg-[#F4F5FA] rounded-l-md px-2 h-10 flex items-center border-[1px] border-[#3A35411F]">
+                <img src="https://flagcdn.com/w40/id.png" alt="ID Flag" class="h-5">
+              </div>
+              <select class="border border-[#F1F1F1] p-2 w-full rounded-r-md">
+                <option value="+62">+62</option>
+                <option value="+1">+1</option>
+                <option value="+91">+91</option>
+              </select>
+            </div>
+            <input
+              type="tel"
+              class="border border-[#F1F1F1] rounded p-2 w-3/5"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- Password -->
+        <div class="mb-5 relative">
+          <label class="block text-[#4A505C] text-[16px] mb-1">
+            Kata Sandi <span class="text-[#D32E1F]">*</span>
+          </label>
+          <input
+            type="password"
+            class="w-full pr-10 p-2 border border-[#F1F1F1] rounded"
+            required
+          />
+          <button type="button" class="absolute top-10 right-3 transform">
+            <img id="eye-icon" src="./assets/login/eye-off.png" alt="Show Password" class="size-5" />
+          </button>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="mb-3 relative">
+          <label class="block text-[#4A505C] text-[16px] mb-1">
+            Konfirmasi Kata Sandi <span class="text-[#D32E1F]">*</span>
+          </label>
+          <input
+            type="password"
+            class="w-full pr-10 p-2 border border-[#F1F1F1] rounded"
+            required
+          />
+          <button type="button" class="absolute top-10 right-3 transform">
+            <img id="eye-icon" src="./assets/login/eye-off.png" alt="Show Password" class="size-5" />
+          </button>
+        </div>
+
+        <!-- Forgot Password Link -->
+        <div class="text-right mb-5">
+          <a href="#" class="text-[16px] text-[#4A505C]">Lupa Password?</a>
+        </div>
+      </form>
+
+      <!-- Register Button -->
+      <button class="w-full p-2 rounded-xl bg-[#3ECF4C] text-white mb-4 text-sm font-semibold">
+        Daftar
+      </button>
+
+      <!-- Login Button -->
+      <div class="w-full flex text-center">
+        <a href="./Login-Page.html" class="w-full p-2 rounded-xl bg-[#E2FCD9CC] text-[#3ECF4C] text-sm font-semibold">
+          Masuk
+        </a>
+      </div>
+
+      <!-- Divider -->
+      <div class="flex items-center my-4 mb-4">
+        <hr class="flex-grow border-t border-[#F1F1F1]" />
+        <span class="px-2 text-[#4A505C]">atau</span>
+        <hr class="flex-grow border-t border-[#F1F1F1]" />
+      </div>
+
+      <!-- Google Register Button -->
+      <button class="w-full flex items-center justify-center p-2 gap-2 rounded-xl border border-[#F1F1F1] text-[#4A505C] text-[16px] font-semibold">
+        <img src="assets/login/icon-google.png" alt="Google Icon" class="h-4" />
+        Daftar dengan Google
+      </button>
+    </div>
+  </main>
+</body>
+</html>
